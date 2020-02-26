@@ -1,21 +1,12 @@
 # vue-mysell
+用 vue 完成的仿饿了么小项目
 
-> A Vue.js project
+如何运行？
+1. 下载项目代码后，打开命令行窗口
 
-## Build Setup
+2. cd到对应目录，运行 npm install 安装依赖
 
-``` bash
-# install dependencies
-npm install
+3. 安装完成后运行 npm run dev 运行项目
 
-# serve with hot reload at localhost:8080
-npm run dev
+4. 打开浏览器输入 http://localhost:8080
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
