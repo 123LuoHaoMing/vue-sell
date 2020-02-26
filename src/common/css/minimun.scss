@@ -1,0 +1,58 @@
+// 移动端 1px 像素边框
+// 添加该类名
+.border-1px {
+  &::after {
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+      transform: scaleY(0.7);
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      transform: scaleY(0.5);
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      transform: scaleY(0.3);
+    }
+  }
+  &::before {
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+      transform: scaleY(0.7);
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      transform: scaleY(0.5);
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      transform: scaleY(0.3);
+    }
+  }
+}
+// 在类样式引入该样式
+@mixin border_bottom_color($color) {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid $color;
+  }
+}
+@mixin border_top_color($color) {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-top: 1px solid $color;
+  }
+}
+
+
+// 根据像素密度设置背景
+@mixin localBackgroudImage($url) {
+  background-image: url($url + '@2x.png');
+  @media screen and (-webkit-min-device-pixel-ratio: 3) {
+    background-image: url($url + '@3x.png');
+  }
+}
